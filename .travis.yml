@@ -7,4 +7,4 @@ before_install:
   - docker build -t mosaadm/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run CI=true mosaadm/docker-react npm run test -- --coverage
+  - docker run -e CI=true mosaadm/docker-react npm run test -- --coverage
